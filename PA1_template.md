@@ -221,14 +221,12 @@ Plotting a time series of 5-minutes interval and the average number of steps tak
 ```r
 imputedStepsPerDayType <- aggregate(steps ~ interval + day, activityImputedData, mean)
 library(lattice)
-xyplot(imputedStepsPerDayType$steps ~ imputeSdtepsPerDayType$interval|imputedStepsPerDayType$day, 
+xyplot(imputedStepsPerDayType$steps ~ imputedStepsPerDayType$interval|imputedStepsPerDayType$day, 
        main="Average Steps per Weekday & Weekend by Interval", xlab ="Interval", ylab ="Avg Steps",
        layout=c(1,2), type ="l")
 ```
 
-```
-## Error in eval(expr, envir, enclos): object 'imputeSdtepsPerDayType' not found
-```
+![plot of chunk plotweekdayweekend](figure/plotweekdayweekend-1.png) 
 
 Based on the time series plotted, observation can be made that the activities for both weekdays and weekends differs. For weekdays, there is a peak in the morning while during weekends, the activities start at a later part of the day and the overall number of steps taken is more than that logged for sweekday. 
 
